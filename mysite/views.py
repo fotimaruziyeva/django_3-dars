@@ -1,6 +1,6 @@
 from django.shortcuts import render
-
-
+from django.views.generic import TemplateView
+from .models import Team
 
 def home_view(request):
  return render(request=request,template_name='index.html')
@@ -14,10 +14,10 @@ def service_view(request):
 
 
 
-def team_view(request):
- return render(request=request,template_name='team.html')
-
-
 def why_view(request):
  return render(request=request,template_name='why.html')
+
+def register_view(request):
+ return render(request=request,template_name='register.html')
+
 
